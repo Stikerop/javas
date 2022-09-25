@@ -1,25 +1,19 @@
-'use strict'
-
-function first() {
-    setTimeout(function () {
-        console.log(1);
-    }, 500)
+const options = {
+    name: 'test',
+    width: 1024,
+    height: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    }
 }
 
-function second () {
-    console.log(2);
+// console.lo g(options.name);
+//
+// delete options.name;
+//
+// console.log(options);
+
+for (let key in options) {
+    console.log(`свойства ${key}, имеет значение ${options[key]}`);
 }
-
-first();
-second();
-
-function learnJS(lang, callback) {
-    console.log(`Я учу: ${lang}`);
-    callback();
-}
-
-function done(){
-    console.log('Я прошел этот урок!');
-}
-
-learnJS('JavaScript', done);
