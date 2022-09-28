@@ -1,181 +1,56 @@
-// 1 Переменные
+// 1 NUMBER
+// const num = 42;
+// console.log(num);
+// const float = 42.42;
+// console.log(float);
+// const pow = 10e3;
+// console.log(pow);
+// console.log(Number.MAX_SAFE_INTEGER)
+// console.log(Math.pow(2, 55 ) -1)
+// console.log(Number.MIN_SAFE_INTEGER)
+// const negative = -42;
+// console.log(negative);
+// console.log(negative < 10);
+// console.log('Max VALUE', Number.MAX_VALUE);
+// console.log('Min VALUE', Number.MIN_VALUE);
+// console.log('possitiv INFINIT', Number.POSITIVE_INFINITY);
+// console.log('Negative INFINIT', Number.NEGATIVE_INFINITY);
+// console.log('Nan', Number.NaN)
+// console.log(NaN)
+// console.log(typeof (NaN));
+// console.log(2/0);
+// console.log(Number.isFinite(false))
+// const stringInt = '40';
+// const stringFLoat = '40.42';
+// console.log(Number(stringInt)   + 2)
+// console.log(+stringInt   + 2)
+// console.log(parseFloat(stringFLoat) +2)
 
-// const firstName = 'Artem'; // string
-// // const age = 24; // number
-// const isProggramer = true; //boolean
+// console.log(0.4 + 0.2);
+// console.log((2 /  5) +  (1 / 5))
+// console.log(+(0.4 + 0.2).toFixed(5));
+// console.log(parseFloat((0.4 + 0.2).toFixed(1)))
 
-// const _orivate = 'private';
-// const $dollar = 'dollar';
-// const asdas5 = '4';
+// 2 BigInt
+// console.log( 90019925474099199999999999999n);
+// console.log(-21412412521523523523523452141n);
+// console.log(parseInt(10n) - 4);
+// console.log((10n - BigInt(4)))
 
-// const false = 'false';  // error
-// const 4asdas = '4sa'; // error
+// 3 Math
+// console.log(Math.E)
+// console.log(Math.PI)
+// console.log(Math.pow(5 , 5))
+// console.log(Math.abs(-42))
+// console.log(Math.max(42, 12321, 1312,123,312312312, 241))
+// console.log(Math.round(4.1))
+// console.log(Math.random())
 
-//  2 Мутирование
+// 4 Example
 
-// console.log('Имя человека: ' + firstName + ', а возраст человека: ' + age);
-// alert('Имя человека: ' + firstName + ', а возраст человека: ' + age);
-//
-// const lastName = prompt('Введите фамилию');
-// alert(firstName +  ' ' + lastName);
+function getRandomBetween (min, max) {
+    return Math.floor( Math.random() * (max - min + 1) + min);
 
-// 3 Операторы
+}
 
-// let currentYear = 2022
-// const birthYear = 1998
-// const age = currentYear  + birthYear;
-// console.log(age);
-//
-// const a = 10;
-// const b = 5;
-//
-// let c = 32;
-// c = c + a;
-// c += a;
-
-
-// console.log(a + b);
-// console.log(a - b);
-// console.log(a * b);
-// console.log(a / b);
-// console.log(++currentYear);
-// console.log(--currentYear);
-// console.log(c);
-
-// 4 Основные типы данных
-// const isProggramer = true; Булиновое
-// const name = 'Artem';  строка
-// const age = 24; номер
-// let  x ; неопределнное
-// null ; null
-//
-// console.log(typeof isProggramer);
-// console.log(typeof name);
-// console.log(typeof age);
-// console.log(typeof x);
-// console.log( null);
-
-//  5 Приоритет операторов
-// const fullAge = 24;
-// const birthYear  = 1998;
-// const currenntYear = 2022;
-//
-//
-// const isFullAge = currenntYear  - birthYear >= fullAge;
-// console.log(isFullAge);
-
-// 6 Условные операторы
-// const courseStatus = 'ready'; //ready, fail, pending
-//
-// if (courseStatus === 'ready') {
-//     console.log('Курс готов и его можно проходить');
-// } else if (courseStatus === 'pending') {
-//     console.log('Курс в процессе подготовки')
-// } else {
-//     console.log('ПОШЕЛ НАХУЙ ТОГДА')
-// }
-
-// const isReady = true ;
-// if(isReady) {
-//     console.log('Все заебись');
-// } else {
-//     console.log('Все хуево');
-// }
-
-// Тернарное выражение
-// isReady ? console.log('Все заебись') : console.log('Все хуево');
-
-// const num1 = 42;
-
-// const num2 = '42';
-//
-// console.log(num1 === num2);
-
-// 7 Булевая Логика
-// true && true
-// true
-// true && false
-// false
-// false && true
-// false
-// false || true
-// true
-// true || false
-// true
-// false || false
-// false
-// true || true
-// true
-// false && false
-// false
-// true && !false
-// true
-
-// Функции
-
-// function calculatAge (year) {
-//     return 2022 - year;
-// }
-
-// console.log(calculatAge(1993));
-// console.log(calculatAge(2019));
-// console.log(calculatAge(1111));
-
-// function logInfoPerson (name, year) {
-//     const age = calculatAge(year)
-//     if (age > 0){
-//         console.log('Человек по имени ' + name + ' сейчас имеет возраст ' + age)
-//     } else {
-//         console.log('Вообще-то это уже будующее')
-//     }
-// }
-//
-// logInfoPerson('Artem', '2023', )
-// logInfoPerson('Kirill', '2007' )
-
-// 9 Массивы
-//c
-// // const cars = new Array('Mazda', 'MB', 'Ford', 'VW');
-// console.log(cars.length);
-//
-// console.log(cars[1]);
-// console.log(cars[0]);
-// console.log(cars[2]);
-//
-// cars[0] = 'Porsche';
-// console.log(cars);
-// cars[3] = 'Mazda';
-// cars[100] = 'Zaz';
-// console.log(cars);
-
-// 10 Циклы
-// const cars = ['Mazda', 'M-B','Ford', 'VW', 'Porsche'];
-// for (let i = 0; i < cars.length; i++) {
-//     const car = cars[i]
-//     console.log(car)
-// }
-//
-// for (let car of cars) {
-//     console.log(car)
-// }
-
-// 11 Объекты
-const person = {
-    firsName: 'Artem',
-    lastname: 'Soldatenko',
-    year: 1998,
-    languages: ['English', 'Ukraine', 'Spanish'],
-    hasWife: false,
-    greet: function () {
-        console.log('greet from person');
-    }
-
-};
-
-const key = 'year';
-console.log(person[key]);
-person.greet();
-person.hasWife = true;
-console.log(person.hasWife)
-person.fromCountry = 'Ukraine';
-console.log(person);
+console.log(getRandomBetween(10, 42));
