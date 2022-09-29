@@ -1,43 +1,73 @@
-// const name = 'Artem'
-// const age = 24;
-//
-// function getAge () {
-//     return age
+// Функции
+// Function declaration
+
+// Function Expression
+
+// function greet  (name) {
+//     console.log('Привет - ' , name);
 // }
+// const greet2 = function greet2 (name) {
+//     console.log('Привет 2 - ', name)
+// }
+//
+// greet ('Artem');
+// greet ('Lena');
+//
+// console.log(typeof greet)
+// console.dir(greet)
 
-// const output = 'Привет, меня зовут ' + name + ' и мой возраст ' + age + ' лет.'
-// const output = `Привет, меня зовут ${name} и мой возраст ${getAge()} лет.`
-// console.log(output)
-// const output = `
-// <div> ЭТО СУЧКА ДИВ</div>
-// <p>а эТО П</p>
-// `
-// console.log(output)
+// Anonim funct
+// let counter =  0;
+// const interval =  setInterval(function (){
+//     if (counter < 5){
+//         clearInterval(interval);
+//     } else {
+//         console.log(++counter);
+//     }
+//
+// }, 1000)
 
-// const name = 'Artem';
-// console.log(name.length);
-// console.log(name.toUpperCase());
-// console.log(name.toLowerCase());
-// console.log(name.charAt(2));
-// console.log(name.indexOf(''))
-// console.log(name.endsWith('sm'))
-// console.log(name.repeat(3))
-// const string = '        password         ';
-// console.log(string.trimRight())
+// 3 Стрелочные фукнции
+// function greet  (name) {
+//     console.log('Привет - ' , name);
+// }
+//
+//
+// const arrow = (name) => {
+//     console.log('Привет - ' , name);
+// }
+//
+//
+// const arrow2 = name => console.log('Привет - ' , name);
+//     arrow2('Artem')
+//
+//
+// const pow2 = num => num ** 2
 
-function logPerson(s, name, age) {
-    if (age < 0){
-        age = 'Еще не родился'
+// console.log(pow2(10))
+
+// 4 Параметры по умолчанию
+// const sum = (a =  40, b = a * 2) => a + b;
+//
+// console.log(sum ());
+//
+// function sumAll (...all) {
+//     let result = 0
+//     for (let num of all) {
+//         result += num
+//     }
+//     return result
+// }
+// const res = sumAll(1, 2, 3, 4, 5)
+// console.log(res)
+
+// Замыкание
+
+function crtMem (name) {
+    return function (lastName) {
+        console.log(name +lastName)
     }
-    return `${s[0]}${name}${s[1]}${age}${s[2]}`
-
 }
-const personName = 'Artem';
-const personName2 = 'Max';
-const personAge = 26;
-const personAge2 = -10;
 
-const output = logPerson`Имя: ${personName}, Возраст: ${personAge}!`;
-const output2 = logPerson`Имя: ${personName2}, Возраст: ${personAge2}!`;
-console.log(output);
-console.log(output2);
+const logWithLastName = crtMem('Artem')
+console.log(logWithLastName('Minin'))
